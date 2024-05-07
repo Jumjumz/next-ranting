@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-function Verification() {
+export default function Verification() {
   const [verify, setVerify] = useState(null);
 
   return (
@@ -11,5 +11,3 @@ function Verification() {
     </button>
   );
 }
-
-export default Verification;

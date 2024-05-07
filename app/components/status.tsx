@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-function Status() {
+export default function Status() {
   const [status, setStatus] = useState(0);
 
   const changeColor = () => {
@@ -28,5 +28,3 @@ function Status() {
     </div>
   );
 }
-
-export default Status;
