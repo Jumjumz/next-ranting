@@ -4,17 +4,19 @@ import { stat } from "fs";
 import { useEffect, useState } from "react";
 
 export default function Status() {
-  const [status, setStatus] = useState(0);
+  const [status, setStatus] = useState(true);
   useEffect(() => {
     setStatus(status);
   }, []);
 
   const changeColor = () => {
     if (!status) {
-      setStatus(1);
+      setStatus(!status);
     } else {
-      setStatus(0);
+      setStatus(false);
     }
+    console.log(status);
+    return status;
   };
 
   return (
