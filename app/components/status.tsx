@@ -1,9 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { stat } from "fs";
+import { useEffect, useState } from "react";
 
 export default function Status() {
   const [status, setStatus] = useState(0);
+  useEffect(() => {
+    setStatus(status);
+  }, []);
 
   const changeColor = () => {
     if (!status) {
