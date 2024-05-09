@@ -2,21 +2,29 @@
 
 import { stat } from "fs";
 import { useEffect, useState } from "react";
+import dashboardInfo from "../lib/info";
 
 export default function Status() {
   const [status, setStatus] = useState(true);
+
   useEffect(() => {
     setStatus(status);
   }, []);
 
   const changeColor = () => {
-    if (!status) {
+    dashboardInfo.map((index) => {
+      if (index.id) {
+        setStatus(index.status!);
+      } else {
+        setStatus(false);
+      }
+    });
+    return status;
+    /* if (!status) {
       setStatus(!status);
     } else {
       setStatus(false);
-    }
-    console.log(status);
-    return status;
+    } */
   };
 
   return (

@@ -9,11 +9,11 @@ export default function Home() {
         <h1 className=" font-mono justify-center">HELLO RANTING.COM!!!</h1>
         <h1>What to commit?!</h1>
         <h1>Still on Progress as I don't know what to put yet</h1>
-        <div className=" w-full h-16 border-t-2 border-slate-200">
+        <div className=" w-full h-16 border-slate-200">
           {dashboardInfo.map((info) => (
             <ul
               key={info.id}
-              className=" h-full font-mono text-md text-slate-400 flex flex-row flex-wrap items-center justify-evenly"
+              className=" h-full font-mono text-md text-slate-400 flex flex-row flex-wrap items-center justify-evenly border-t-2"
             >
               <li>{info.username}</li>
               <li>

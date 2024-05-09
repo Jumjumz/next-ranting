@@ -1,4 +1,4 @@
-import { jsx } from "react/jsx-runtime";
+
 
 const dashboardInfo = [
     {
