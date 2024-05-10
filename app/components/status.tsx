@@ -5,26 +5,23 @@ import { useEffect, useState } from "react";
 import dashboardInfo from "../lib/info";
 
 export default function Status() {
-  const [status, setStatus] = useState(true);
+  const [status, setStatus] = useState<boolean>();
 
   useEffect(() => {
-    setStatus(status);
+    dashboardInfo.map((index) => {
+      if (index.id) {
+        dashboardInfo.push({ id: index.id, status: setStatus(index.status) });
+      }
+      setStatus(status);
+    });
   }, []);
 
   const changeColor = () => {
-    dashboardInfo.map((index) => {
-      if (index.id) {
-        setStatus(index.status!);
-      } else {
-        setStatus(false);
-      }
-    });
-    return status;
-    /* if (!status) {
+    if (!status) {
       setStatus(!status);
     } else {
       setStatus(false);
-    } */
+    }
   };
 
   return (

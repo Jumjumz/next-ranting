@@ -22,6 +22,7 @@ const dashboardInfo = [
         cell: "+63 (976) 003 517",
         link: "https://scaleforge.tech/",
         dateRegistered: "2024 Apr 12",
+        status: false,
         dateRegisteredWithTime: "2024 Apr 12 08:30 PM"
 
     },
@@ -34,6 +35,7 @@ const dashboardInfo = [
         cell: "+63 (976) 003 517",
         link: "https://scaleforge.tech/",
         dateRegistered: "2024 Apr 12",
+        status: false,
         dateRegisteredWithTime: "2024 Apr 12 08:30 PM"
 
     },
@@ -46,6 +48,7 @@ const dashboardInfo = [
         cell: "+63 (976) 003 517",
         link: "https://scaleforge.tech/",
         dateRegistered: "2024 Apr 12",
+        status: false,
         dateRegisteredWithTime: "2024 Apr 12 08:30 PM"
 
     }
