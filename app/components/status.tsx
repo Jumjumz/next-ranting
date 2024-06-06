@@ -1,18 +1,16 @@
 "use client";
 
-import { stat } from "fs";
 import { useEffect, useState } from "react";
 import dashboardInfo from "../lib/info";
 
 export default function Status() {
-  const [status, setStatus] = useState<boolean>();
+  const [status, setStatus] = useState<boolean>(false);
 
   useEffect(() => {
     dashboardInfo.map((index) => {
       if (index.id) {
-        dashboardInfo.push({ id: index.id, status: setStatus(index.status) });
+        dashboardInfo.push({ id: index.id, status: status });
       }
-      setStatus(status);
     });
   }, []);
 
